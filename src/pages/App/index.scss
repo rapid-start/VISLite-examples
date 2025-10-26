@@ -1,0 +1,62 @@
+.app-view {
+    padding-top: 60px;
+
+    &>.header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 60px;
+        line-height: 60px;
+        width: 100%;
+        border-bottom: 1px solid rgb(232, 232, 232);
+        background-repeat: no-repeat;
+        background-size: auto 90%;
+        background-position: 20px center;
+        padding-left: 90px;
+        white-space: nowrap;
+        z-index: 1;
+        background-color: white;
+
+        &>.tips {
+            display: inline-block;
+            font-size: 14px;
+            vertical-align: bottom;
+            font-weight: 400;
+            color: gray;
+        }
+
+        &>.right-btn {
+            white-space: nowrap;
+            position: fixed;
+            right: 0;
+            top: 10px;
+            line-height: 30px;
+            background-color: #d5d9db;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px 0 0 5px;
+            cursor: pointer;
+
+            &>span {
+                background-color: rgb(0, 0, 0);
+                padding: 5px 10px;
+                color: white;
+                border-radius: 5px;
+            }
+
+            &>a {
+                padding-right: 10px;
+                color: black;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &>h1 {
+        background-image: url("../../assets/logo.png");
+        padding-top: 100px;
+        background-size: auto 100px;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+}

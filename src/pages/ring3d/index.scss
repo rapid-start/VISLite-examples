@@ -1,0 +1,21 @@
+.ring3d {
+    height: 500px;
+    text-align: center;
+
+    .title {
+        font-size: 20px;
+        line-height: 50px;
+        font-weight: 600;
+    }
+
+    .sub-title {
+        font-size: 12px;
+        font-weight: 200;
+    }
+
+    .content {
+        display: inline-block;
+        width: 435px;
+        height: 435px;
+    }
+}

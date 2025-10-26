@@ -1,0 +1,47 @@
+.welcome {
+    overflow: hidden;
+
+    .bigview {
+        box-shadow: 0 0 14px 5px #767676;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: rgb(71 70 70) 0px 0px 17px 8px;
+        }
+    }
+
+    .itemsview {
+        &>.item {
+            break-inside: avoid;
+            width: 220px;
+            display: inline-block;
+            margin-bottom: 10px;
+            text-align: center;
+            margin-left: 5px;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                text-decoration: underline;
+
+                &>.icon {
+                    background-size: 105% auto;
+                }
+            }
+
+            &>.icon {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                transition-property: background-size;
+                transition-duration: 200ms;
+            }
+
+            &>.label {
+                line-height: 26px;
+                font-size: 14px;
+                color: black;
+            }
+        }
+    }
+}
