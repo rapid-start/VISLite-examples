@@ -1,9 +1,9 @@
 <div class="bigview" id="content-id">
 
     <!-- 大标题  -->
-    <div class="title-view">
-        <div class="title" z-bind:style="'fontSize: '+titleSize + 'px'">
-            可视化大屏
+    <div class="title-view" style="background-image: url(./images/head_bg.png);">
+        <div class="title" z-bind:style="'font-size: '+titleSize + 'px'">
+            数据可视化大屏
         </div>
     </div>
 
@@ -56,3 +56,24 @@
     </div>
 
 </div>
+
+<!-- 返回首页按钮（和大屏无关） -->
+<a class="goback-btn" style="
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 20px;
+        width: 50px;
+        line-height: 26px;
+        cursor: pointer;
+        text-decoration: underline;
+        color: #FF5722;
+        border: 2px solid #FF5722;
+        background-color: white;
+        z-index:999999;
+        font-size: 14px;
+        text-align: center;
+        padding:0;
+    " target="_blank" href="#/welcome" title="温馨提示：点击我返回用例首页！">
+    返回
+</a>

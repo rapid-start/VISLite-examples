@@ -1,5 +1,4 @@
 .sankey {
-    width: 100vw;
+    width: calc(100vw - 50px);
     height: calc(100vh - 100px);
-    margin: 20px auto 0 auto;
 }

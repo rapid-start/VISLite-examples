@@ -22,7 +22,7 @@ export default defineElement({
     methods: {
         updateSize() {
             let width = 1920;
-            let height = 1920 * (window.innerHeight - 60) / window.innerWidth;
+            let height = 1920 * window.innerHeight / window.innerWidth;
             let scaleVal = window.innerWidth / 1920;
 
             let contentEl = document.getElementById("content-id");
@@ -32,6 +32,7 @@ export default defineElement({
             contentEl.style.height = height + 'px';
 
             this.titleSize = height * 0.03;
+            contentEl.style.display = "block";
         }
     }
 })

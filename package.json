@@ -2,8 +2,9 @@
   "name": "vislite-examples",
   "description": "基于VISLite开发的一些快速复制用例",
   "scripts": {
-    "dev": "webpack server --config ./config/webpack.dev.js",
-    "build": "webpack --config ./config/webpack.prod.js"
+    "postinstall": "oipage-cli disk -c ./node_modules/vislite/lib ./docs/cache-VISLite -f && node ./build/install.js",
+    "dev": "webpack server --config ./build/webpack.dev.js",
+    "build": "oipage-cli disk -d ./docs/dist && webpack --config ./build/webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,10 @@
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.0",
     "css-loader": "^7.1.2",
-    "html-webpack-plugin": "^5.5.0",
-    "oipage": "^1.2.1",
+    "oipage": "^1.5.0",
     "sass": "^1.86.0",
     "sass-loader": "^16.0.5",
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
@@ -40,7 +41,7 @@
   },
   "dependencies": {
     "pointin": "^0.1.1",
-    "vislite": "^1.5.0",
-    "zipaper": "^0.1.0"
+    "vislite": "^1.7.0-alpha.1",
+    "zipaper": "^0.2.0"
   }
 }

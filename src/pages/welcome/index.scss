@@ -10,6 +10,20 @@
         }
     }
 
+    fieldset {
+        max-width: 1000px;
+        margin: 20px auto;
+        border-radius: 10px;
+
+        legend {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+    }
+
     .itemsview {
         &>.item {
             break-inside: avoid;

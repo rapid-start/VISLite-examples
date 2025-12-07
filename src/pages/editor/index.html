@@ -1,0 +1,29 @@
+<div class='editor'>
+    <div class="left view">
+        <div class="nav">
+            <span id="nav-editor-btn" class="active" z-on:click="showExampleEditor">代码编辑</span>
+            <span id="nav-code-btn" z-on:click="showExampleCode">完整代码</span>
+        </div>
+        <div class="tool">
+            <div class="side left">
+                <span class="js">
+                    JS
+                </span>
+            </div>
+            <div class="side right">
+                <button id="run-btn" style="background-image: url(./images/run.svg)" class="run"
+                    z-on:click="runExample">
+                    运行
+                </button>
+            </div>
+        </div>
+        <textarea id="source-id" z-model="script" spellcheck="false"></textarea>
+        <div id="code-id" class="code-view"></div>
+    </div>
+    <div class="right view">
+        <iframe id="run-id"></iframe>
+    </div>
+    <button class="goback-btn" z-on:click="goback" title="温馨提示：点击我返回用例首页！">
+        返回
+    </button>
+</div>

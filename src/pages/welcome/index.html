@@ -1,48 +1,62 @@
 <div class='welcome'>
-    <div class='itemsview'>
-        <div class='item' z-on:click='openExample' tag='manual-unlocking'>
-            <div class="icon" style='height:310px;background-image: url(../snipping/manual-unlocking.jpeg)'></div>
-            <h4 class='label'>手式解锁</h4>
-        </div>
-        <div class='item' z-on:click='openExample' tag='zoom-line'>
-            <div class="icon" style='height:120px;background-image: url(../snipping/zoom-line.jpeg)'></div>
-            <h4 class='label'>可缩放折线图</h4>
-        </div>
+    <fieldset>
+        <legend>
+            复制用例
+        </legend>
+        <div class='itemsview'>
+            <div class='item' z-on:click='openCopy' tag='tree-orient-top-bottom'>
+                <div class="icon" style='height:160px;background-image: url(./snipping/tree-orient-top-bottom.jpeg)'>
+                </div>
+                <h4 class='label'>从上到下树状图</h4>
+            </div>
 
-        <div class='item' z-on:click='openExample' tag='bigview'>
-            <div class="icon" style='height:140px;background-image: url(../snipping/bigview.jpeg)'></div>
-            <h4 class='label'>可视化大屏</h4>
-        </div>
+            <div class='item' z-on:click='openCopy' tag='tree-radial'>
+                <div class="icon" style='height:240px;background-image: url(./snipping/tree-radial.jpeg)'></div>
+                <h4 class='label'>径向树状图</h4>
+            </div>
 
-        <div class='item' z-on:click='openExample' tag='tree-orient-top-bottom'>
-            <div class="icon" style='height:160px;background-image: url(../snipping/tree-orient-top-bottom.jpeg)'></div>
-            <h4 class='label'>从上到下树状图</h4>
+            <div class='item' z-on:click='openCopy' tag='ring-simple'>
+                <div class="icon" style='height:240px;background-image: url(./snipping/ring-simple.jpeg)'></div>
+                <h4 class='label'>简单环图</h4>
+            </div>
         </div>
+    </fieldset>
 
-        <div class='item' z-on:click='openExample' tag='ring3d'>
-            <div class="icon" style='height:200px;background-image: url(../snipping/ring3d.jpeg)'></div>
-            <h4 class='label'>3D环图</h4>
+    <fieldset>
+        <legend>
+            运行用例
+        </legend>
+        <div class='itemsview'>
+            <div class='item' z-on:click='openExample' tag='h2o'>
+                <div class="icon" style='height:160px;background-image: url(./snipping/h2o.png)'></div>
+                <h4 class='label'>水分子式 H2O</h4>
+            </div>
+
+            <div class='item' z-on:click='openExample' tag='sankey'>
+                <div class="icon" style='height:180px;background-image: url(./snipping/sankey.jpeg)'></div>
+                <h4 class='label'>桑基图</h4>
+            </div>
+
+            <div class='item' z-on:click='openExample' tag='ring3d'>
+                <div class="icon" style='height:200px;background-image: url(./snipping/ring3d.jpeg)'></div>
+                <h4 class='label'>3D环图</h4>
+            </div>
+
+            <div class='item' z-on:click='openExample' tag='bigview'>
+                <div class="icon" style='height:140px;background-image: url(./snipping/bigview.jpeg)'></div>
+                <h4 class='label'>可视化大屏</h4>
+            </div>
+
+            <div class='item' z-on:click='openExample' tag='zoom-line'>
+                <div class="icon" style='height:120px;background-image: url(./snipping/zoom-line.jpeg)'></div>
+                <h4 class='label'>可缩放折线图</h4>
+            </div>
+
+            <div class='item' z-on:click='openExample' tag='manual-unlocking'>
+                <div class="icon" style='height:310px;background-image: url(./snipping/manual-unlocking.jpeg)'></div>
+                <h4 class='label'>手式解锁</h4>
+            </div>
         </div>
-
-        <div class='item' z-on:click='openExample' tag='sankey'>
-            <div class="icon" style='height:180px;background-image: url(../snipping/sankey.jpeg)'></div>
-            <h4 class='label'>桑基图</h4>
-        </div>
-
-        <div class='item' z-on:click='openExample' tag='h2o'>
-            <div class="icon" style='height:160px;background-image: url(../snipping/h2o.png)'></div>
-            <h4 class='label'>水分子式 H2O</h4>
-        </div>
-
-        <div class='item' z-on:click='openExample' tag='tree-radial'>
-            <div class="icon" style='height:240px;background-image: url(../snipping/tree-radial.jpeg)'></div>
-            <h4 class='label'>径向树状图</h4>
-        </div>
-
-        <div class='item' z-on:click='openExample' tag='ring-simple'>
-            <div class="icon" style='height:240px;background-image: url(../snipping/ring-simple.jpeg)'></div>
-            <h4 class='label'>简单环图</h4>
-        </div>
-
-    </div>
+    </fieldset>
 </div>
+<router></router>

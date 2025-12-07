@@ -1,0 +1,163 @@
+.editor {
+    background-color: #eff0f6;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &>.view {
+        height: calc(100vh - 50px);
+        vertical-align: top;
+        white-space: normal;
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    &>.view.left {
+        width: 40%;
+        border-right: 1px solid #cdd0d1;
+    }
+
+    &>.view.left>.nav {
+        line-height: 33px;
+        z-index: 2;
+        position: relative;
+        background-color: inherit;
+    }
+
+    &>.view.left>.nav>span {
+        display: inline-block;
+        padding: 0 20px;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    &>.view.left>.nav>span.active {
+        color: #409eff;
+        background-color: #fff;
+        border-right-color: #dcdfe6;
+        border-left-color: #dcdfe6;
+        font-weight: 800;
+    }
+
+    &>.view.left>.tool {
+        height: 30px;
+        background-color: white;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 1;
+    }
+
+    &>.view.left>.tool>.side {
+        position: absolute;
+        top: 0;
+    }
+
+    &>.view.left>.tool>.side.left {
+        left: 10px;
+    }
+
+    &>.view.left>.tool>.side.left>.js {
+        background: #f7df1e;
+        color: #000;
+        font-size: 12px;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 0 10px;
+        margin-left: 5px;
+        margin-top: 3px;
+        height: 24px;
+        line-height: 24px;
+        vertical-align: middle;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 800;
+        font-family: monospace;
+    }
+
+    &>.view.left>.tool>.side.right {
+        right: 0;
+    }
+
+    &>.view.left>.tool>.side.right>.run {
+        width: 62px;
+        height: 30px;
+        color: #fff;
+        background-color: #409eff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-size: auto 50%;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+
+    &>.view.left>.tool>.side.right>.run:hover {
+        background-color: #5aabff;
+    }
+
+    &>.view.left>textarea {
+        width: 100%;
+        height: calc(100% - 65px);
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        resize: none;
+    }
+
+    &>.view.left>.code-view {
+        width: 100%;
+        height: calc(100% - 65px);
+        font-size: 14px;
+    }
+
+    &>.view.left>.code-view>.pageby-pre {
+        width: 100% !important;
+        height: 100% !important;
+        background-color: white;
+        outline: none !important;
+    }
+
+    &>.view.left>.code-view>.pageby-pre>pre {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    &>.view.right {
+        width: calc(100vw - 40%);
+
+        &>iframe {
+            background-color: white;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            border: none;
+            margin: 20px;
+            border-radius: 5px;
+        }
+    }
+
+    &>.goback-btn {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 20px;
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+        text-decoration: underline;
+        color: #FF5722;
+        border: 2px solid #FF5722;
+        background-color: white;
+
+        &:hover {
+            font-weight: 800;
+        }
+    }
+}
