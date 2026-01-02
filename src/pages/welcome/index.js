@@ -10,6 +10,7 @@ export default defineElement({
         content: style
     },
     methods: {
+        nouse() { },
         openCopy(_, target) {
             openBlank("#/editor?c=" + target.getAttribute("tag"));
         },

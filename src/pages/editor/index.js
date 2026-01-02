@@ -86,31 +86,42 @@ export default defineElement({
             iframeDocument.close();
 
         },
-        getFullCode(scriptCode) {
-            return `<body>
+        getFullCode(scriptObj) {
+            return `${scriptObj ? scriptObj.tag : ""}<body>
 ${this.template}
 </body>
 <script type="module">
-${("\n" + (scriptCode || this.script)).replace(/\n/g, "\n    ")}
+${("\n" + (scriptObj ? scriptObj.code : this.script)).replace(/\n/g, "\n    ")}
 </script>
 <style>
 ${("\n" + this.style).replace(/\n/g, "\n    ")}
 </style>`;
         },
         getRunScript() {
-            let execResult = /import *\{([^}]+)\} *from *(["'])vislite\2;?/.exec(this.script);
+            let scriptCode = this.script;
+            let scriptTag = "";
 
-            // 根据开发环境和生产环境区别lib地址
-            let libSrc = window.needCache ? "https://cdn.jsdelivr.net/npm/vislite@" + window.VISLite_system.version + "/lib/" : "./cache-VISLite/";
+            // VISLite
+            let exec1Result = /import *\{([^}]+)\} *from *(["'])vislite\2;?/.exec(this.script);
+            if (exec1Result) {
 
-            let items = execResult[1].trim().split(","), item, index, importCode = "";
-            for (index = 0; index < items.length; index++) {
-                item = items[index].trim();
+                // 根据开发环境和生产环境区别lib地址
+                let libSrc = window.needCache ? "https://cdn.jsdelivr.net/npm/vislite@" + window.version.vislite + "/lib/" : "./cache/vislite/";
 
-                importCode += "import " + item + " from '" + libSrc + item + "/index.es.js';\n"
+                let items = exec1Result[1].trim().split(","), item, index, importCode = "";
+                for (index = 0; index < items.length; index++) {
+                    item = items[index].trim();
+
+                    importCode += "import " + item + " from '" + libSrc + item + "/index.es.js';\n"
+                }
+
+                scriptCode = scriptCode.replace(exec1Result[0], importCode);
             }
 
-            return this.script.replace(execResult[0], importCode);
+            return {
+                code: scriptCode,
+                tag: scriptTag
+            };
         }
     }
 })

@@ -1,5 +1,5 @@
 # [VISLite-examples](https://rapid-start.github.io/VISLite-examples/)
-基于VISLite开发的一些快速复制用例
+基于VISLite及相关产品开发的一些可以快速复制的例子代码
 
 <p>
     <a href="https://github.com/rapid-start/VISLite-examples" target='_blank'>

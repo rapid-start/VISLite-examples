@@ -1,10 +1,11 @@
 {
   "name": "vislite-examples",
-  "description": "基于VISLite开发的一些快速复制用例",
+  "description": "基于VISLite及相关产品开发的一些可以快速复制的例子代码",
   "scripts": {
-    "postinstall": "oipage-cli disk -c ./node_modules/vislite/lib ./docs/cache-VISLite -f && node ./build/install.js",
+    "postinstall": "npm run copy:vislite && node ./build/install.js",
     "dev": "webpack server --config ./build/webpack.dev.js",
-    "build": "oipage-cli disk -d ./docs/dist && webpack --config ./build/webpack.prod.js"
+    "build": "oipage-cli disk -d ./docs/dist && webpack --config ./build/webpack.prod.js",
+    "copy:vislite": "oipage-cli disk -c ./node_modules/vislite/lib ./docs/cache/vislite -f"
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,10 @@
   "keywords": [
     "project",
     "webpack",
-    "zipaper"
+    "zipaper",
+    "vislite",
+    "@vislite/canvas",
+    "@vislite/chart"
   ],
   "author": {
     "name": "zxl20070701",
@@ -30,10 +34,10 @@
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.0",
     "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.5.0",
     "oipage": "^1.5.0",
     "sass": "^1.86.0",
     "sass-loader": "^16.0.5",
-    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
@@ -41,7 +45,7 @@
   },
   "dependencies": {
     "pointin": "^0.1.1",
-    "vislite": "^1.7.0-alpha.1",
-    "zipaper": "^0.2.0"
+    "vislite": "^1.7.0",
+    "zipaper": "^0.2.1"
   }
 }

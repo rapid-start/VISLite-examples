@@ -1,6 +1,6 @@
 const fs = require("fs")
-const package = require("vislite/package.json")
+const vislitePackage = require("vislite/package.json")
 
-fs.writeFileSync("./docs/system.js", `window.VISLite_system = {
-    "version": "${package.version}"
+fs.writeFileSync("./docs/system.js", `window.version = {
+    "vislite":"${vislitePackage.version}"
 };`)

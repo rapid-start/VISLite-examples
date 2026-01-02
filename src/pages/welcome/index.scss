@@ -56,6 +56,17 @@
                 font-size: 14px;
                 color: black;
             }
+
+            &>.lib-link {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                background-color: #607D8B;
+                color: white;
+                font-size: 12px;
+                padding: 2px 5px;
+                border-radius: 5px;
+            }
         }
     }
 }
