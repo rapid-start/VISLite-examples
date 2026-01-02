@@ -2,10 +2,11 @@
   "name": "vislite-examples",
   "description": "基于VISLite及相关产品开发的一些可以快速复制的例子代码",
   "scripts": {
-    "postinstall": "npm run copy:vislite && node ./build/install.js",
+    "postinstall": "npm run copy:vislite && npm run copy:@vislite/canvas && node ./build/install.js",
     "dev": "webpack server --config ./build/webpack.dev.js",
     "build": "oipage-cli disk -d ./docs/dist && webpack --config ./build/webpack.prod.js",
-    "copy:vislite": "oipage-cli disk -c ./node_modules/vislite/lib ./docs/cache/vislite -f"
+    "copy:vislite": "oipage-cli disk -c ./node_modules/vislite/lib ./docs/cache/vislite -f",
+    "copy:@vislite/canvas": "oipage-cli disk -c ./node_modules/@vislite/canvas/dist/canvas.js ./docs/cache/canvas.js -f"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
     "xhtml-to-json": "^0.1.0"
   },
   "dependencies": {
+    "@vislite/canvas": "^1.1.0",
     "pointin": "^0.1.1",
     "vislite": "^1.7.0",
     "zipaper": "^0.2.1"

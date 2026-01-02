@@ -118,6 +118,16 @@ ${("\n" + this.style).replace(/\n/g, "\n    ")}
                 scriptCode = scriptCode.replace(exec1Result[0], importCode);
             }
 
+             // @vislite/canvas
+            let exec2Result = /import *([^} ]+) *from *(["'])@vislite\/canvas\2;?/.exec(this.script);
+            if (exec2Result) {
+                let libSrc = window.needCache ? "https://cdn.jsdelivr.net/npm/@vislite/canvas@" + window.version.canvas : "./cache/canvas.js";
+                scriptTag += "<script src='" + libSrc + "'></script>";
+
+                let importCode = "var " + exec2Result[1] + " = window.Canvas;\n"
+                scriptCode = scriptCode.replace(exec2Result[0], importCode);
+            }
+
             return {
                 code: scriptCode,
                 tag: scriptTag
