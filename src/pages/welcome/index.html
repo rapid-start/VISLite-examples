@@ -5,6 +5,13 @@
         </legend>
         <div class='itemsview'>
 
+            <div class='item' z-on:click='openCopy' tag='pie-simple'>
+                <div class="icon" style='height:240px;background-image: url(./snipping/pie-simple.jpeg)'></div>
+                <h4 class='label'>简单饼图</h4>
+                <a class="lib-link" z-on:click.stop="nouse" target="_blank"
+                    href="https://github.com/oi-contrib/vislite-plugin-chart">@vislite/chart</a>
+            </div>
+
             <div class='item' z-on:click='openCopy' tag='tree-radial'>
                 <div class="icon" style='height:240px;background-image: url(./snipping/tree-radial.jpeg)'></div>
                 <h4 class='label'>径向树状图</h4>

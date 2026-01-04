@@ -118,7 +118,7 @@ ${("\n" + this.style).replace(/\n/g, "\n    ")}
                 scriptCode = scriptCode.replace(exec1Result[0], importCode);
             }
 
-             // @vislite/canvas
+            // @vislite/canvas
             let exec2Result = /import *([^} ]+) *from *(["'])@vislite\/canvas\2;?/.exec(this.script);
             if (exec2Result) {
                 let libSrc = window.needCache ? "https://cdn.jsdelivr.net/npm/@vislite/canvas@" + window.version.canvas : "./cache/canvas.js";
@@ -126,6 +126,17 @@ ${("\n" + this.style).replace(/\n/g, "\n    ")}
 
                 let importCode = "var " + exec2Result[1] + " = window.Canvas;\n"
                 scriptCode = scriptCode.replace(exec2Result[0], importCode);
+            }
+
+
+            // @vislite/chart
+            let exec3Result = /import *\{([^}]+)\} *from *(["'])@vislite\/chart\2;?/.exec(this.script);
+            if (exec3Result) {
+                let libSrc = window.needCache ? "https://cdn.jsdelivr.net/npm/@vislite/chart@" + window.version.chart : "./cache/chart.js";
+                scriptTag += "<script src='" + libSrc + "'></script>";
+
+                let importCode = "var {" + exec3Result[1] + "} = window.Chart;\n"
+                scriptCode = scriptCode.replace(exec3Result[0], importCode);
             }
 
             return {
